@@ -17,6 +17,136 @@
 {
     --White: hsl(0, 0%, 100%);
     --LightPink: hsl(275, 100%, 97%);
-    --GrayishPurlple: hsl(292, 16%, 49%);
+    --GrayishPurple: hsl(292, 16%, 49%);
     --DarkPurple: hsl(292, 42%, 14%);
+}
+
+
+
+body
+{
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat ;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+h1,
+h2,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+
+.card
+{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    background-color: var(--White);
+    padding: 4px;
+    margin-top: 10%;
+    border-radius: 20px;
+    text-align: left;
+    align-items: left;
+    box-shadow: 0px 10px 60px hsla(292, 16%, 49%, 0.3);
+}
+
+
+.title
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+}
+
+
+
+
+.icon
+{
+  
+    width: 25px;
+}
+
+.acc:not(:last-of-type)
+{
+    border-bottom: 1.5px solid var(--LightPink);
+    padding-block: 1rem;
+}
+
+.q
+{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    gap: 1rem;
+    justify-content: space-between;
+    
+}
+
+.q h2
+{
+    font-size: 1rem;
+    color: var(--DarkPurple);
+    font-weight: 600;
+}
+
+.a
+{
+    /* display: none; */
+font-size: 0.8rem;
+  margin-top: 1rem;
+  line-height: 1.5;
+  color: var(--GrayishPurple);
+  overflow: hidden;
+  max-height: 0px;
+  opacity: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+}
+
+
+
+.display
+{
+    max-height: 60px !important;
+    opacity: 1 !important;   
+}
+
+.collapsing-ico{
+    content: url("assets/images/icon-minus.svg"); 
+} 
+
+
+
+@media only screen and (max-width: 768px)
+{
+        body
+        {
+            background-image: url(assets/images/background-pattern-mobile.svg) ;
+            background-repeat: no-repeat ;
+           
+           
+            
+        }
+}
+
+@media only screen and (max-width: 480px) {
+
+    body
+    {
+        background-image: url(assets/images/background-pattern-mobile.svg) ;
+        background-repeat: no-repeat ;
+       
+        
+    }
+    
 }
