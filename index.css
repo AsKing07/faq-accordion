@@ -1,16 +1,19 @@
 @font-face {
-    font-family: WorkSansBold;
+    font-family: "Work Sans";
     src: url(/assets/fonts/static/WorkSans-Bold.ttf);
+    font-family:700 ;
 }
 
 @font-face {
-    font-family: "WorkSansRegular";
+    font-family: "Work Sans";
     src: url(/assets/fonts/static/WorkSans-Regular.ttf);
+    font-weight: 400;
 }
 
 @font-face {
-    font-family: "WorkSansSemiBold";
+    font-family: "Work Sans";
     src: url(/assets/fonts/static/WorkSans-SemiBold.ttf);
+    font-weight: 600;
 }
 
 :root
@@ -35,7 +38,7 @@ body
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-family: "WorkSansSemiBold", "Sans serif";
+    font-family: "Work Sans";
 }
 
 
@@ -103,7 +106,7 @@ p {
     font-weight: 600;
 }
 
-h2:hover
+h2:hover, h2:focus
     {
         color:  hsl(281, 85%, 54%);
 
@@ -135,6 +138,9 @@ font-size: 0.8rem;
     content: url("assets/images/icon-minus.svg"); 
 } 
 
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
 
 @media screen and (min-width: 768px) {
     body

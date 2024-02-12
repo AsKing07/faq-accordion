@@ -26,3 +26,5 @@ Acc.forEach((item, index) => {
 AccIcon.forEach((item, index) => {
     item.addEventListener("click", () => OpenAcc(index));
 });
+
+
