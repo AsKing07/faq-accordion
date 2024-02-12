@@ -4,12 +4,12 @@
 }
 
 @font-face {
-    font-family: WorkSansRegular;
+    font-family: "WorkSansRegular";
     src: url(/assets/fonts/static/WorkSans-Regular.ttf);
 }
 
 @font-face {
-    font-family: WorkSansSemiBold;
+    font-family: "WorkSansSemiBold";
     src: url(/assets/fonts/static/WorkSans-SemiBold.ttf);
 }
 
@@ -27,12 +27,15 @@ body
 {
     background-image: url(assets/images/background-pattern-desktop.svg);
     background-repeat: no-repeat ;
+    background-size: 100%;
     font-size: 1rem;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-family: "WorkSansSemiBold", "Sans serif";
 }
 
 
@@ -100,6 +103,12 @@ p {
     font-weight: 600;
 }
 
+h2:hover
+    {
+        color:  hsl(281, 85%, 54%);
+
+    }
+
 .a
 {
     /* display: none; */
@@ -111,14 +120,15 @@ font-size: 0.8rem;
   max-height: 0px;
   opacity: 0;
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+  padding-bottom: 1rem;
 }
 
 
 
 .display
 {
-    max-height: 60px !important;
-    opacity: 1 !important;   
+    max-height: 60px ;
+    opacity: 1 ;   
 }
 
 .collapsing-ico{
@@ -126,17 +136,75 @@ font-size: 0.8rem;
 } 
 
 
+@media screen and (min-width: 768px) {
+    body
+    {
+        background-image: url("./assets/images/background-pattern-desktop.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .card
+    {
+        margin-top: 15%;
+        width: 600px;
+        max-width: 800px;
+    }
+
+    .title
+    {
+        padding-bottom: 1rem;
+    }
+
+    .icon
+    {
+        width: 30px;
+    }
+
+    h1
+    {
+        font-size: 2.5rem;
+    }
+    
+    h2
+    {
+        font-size: 2rem;
+    }
+
+    p
+    {
+        font-size: 1rem;
+    }
+
+    .display
+    {
+        max-height: 100px;
+    }
+}
+
 
 @media only screen and (max-width: 768px)
 {
         body
         {
             background-image: url(assets/images/background-pattern-mobile.svg) ;
-            background-repeat: no-repeat ;
-           
+            
+           position:relative;
+           min-height: 100vh;
            
             
         }
+
+        .card
+    {
+        top: 10%;
+        width: 300px;
+        max-width: 600px;
+        padding: 2px;
+        position: absolute;
+
+    
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -144,9 +212,23 @@ font-size: 0.8rem;
     body
     {
         background-image: url(assets/images/background-pattern-mobile.svg) ;
-        background-repeat: no-repeat ;
+        position:relative;
+        min-height: 100vh;
+
+        
        
         
+    }
+
+    .card
+    {
+        top: 10%;
+        position: absolute;
+        width: 300px;
+        max-width: 600px;
+        padding: 2px;
+
+    
     }
     
 }
